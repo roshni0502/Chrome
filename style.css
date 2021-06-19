@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+body{
+ 
+ overflow-x: auto;
+ overflow-y: auto;
+ background-image: url(road.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: fixed;
+ background-color: black;
+ 
+}
+.dino{
+	width: 20vh;
+	height: 20vh;
+	position: absolute;
+	left: 15vh;
+	bottom: -75vh;
+	background-image: url(dino.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#dino_img{
+	left: 200px;
+}
+.obstacle{
+	position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.gameover{
+	visibility:hidden;
+}
+.animateDino{
+	animation: dinoAni 0.5s linear;
+
+}
+.roadAni{
+	animation : roadani 0.5s linear infinite;
+}
+#road{
+	
+	height: 5vh;
+	position: absolute;
+	bottom: -80vh;
+	width: 220vh;
+	background-repeat: repeat;
+	left: 0%;
+	
+}
+.roadimg{
+	object-fit: cover;
+	width: 100%;
+}
+
+@keyframes dinoAni{
+	0%,
+   100%{
+		bottom:  -85vh;
+	}
+	45%,
+	55%{
+		bottom: -40vh;
+	}
+}
+
+
+@keyframes roadani{
+	0%{
+		left:-100%;
+	}
+	
+	 100%{
+	  left: 0%;
+	 }
+}
+@media (min-width : 360px) and (max-width: 700px){
+	
+
+@keyframes dinoAni{
+	0%,
+   100%{
+		bottom:  -66vh;
+	}
+	45%,
+	55%{
+		bottom: -30vh;
+	}
+	
+}
+}
